@@ -15,3 +15,4 @@ for i in range(T):
     else:
         stk.append("-1")
 print(stk[1], end=" ")
+
