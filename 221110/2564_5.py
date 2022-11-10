@@ -28,7 +28,22 @@ for i in range(num):
     to_zero = store[i][0] + store[i][1]
     to_finish = x + y - to_zero
     tmp = [to_zero, to_finish, store[i][2]]
-    print(tmp)
+    how = store[i][2] + dg[2]
+    candid = []
+    print(f'tmp: {tmp}')
+    if how % 2 == 0:
+        candid.append(abs(tmp[0] - dg[0]))
+        candid.append(2 * x + 2 * y - candid[0])
+    else:
+        candid.append(tmp[0] + dg[0])
+        candid.append(2 * x + 2 * y - candid[0])
+    print(candid)
+    print(min(candid))
+    result += min(candid)
+print(result)
+    
+
+    
 
     
 
