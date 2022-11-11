@@ -35,8 +35,11 @@ for i in range(num):
         candid.append(abs(tmp[0] - dg[0]))
         candid.append(2 * x + 2 * y - candid[0])
     else:
-        candid.append(tmp[0] + dg[0])
+        candid.append(tmp[0] + dg[0] + dg[1])
+        print(f't:{tmp}')
+        print(f'd:{dg}')
         candid.append(2 * x + 2 * y - candid[0])
+    
     print(candid)
     print(min(candid))
     result += min(candid)
