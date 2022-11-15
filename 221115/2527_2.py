@@ -8,9 +8,14 @@ for _ in range(4):
     arr = list(map(int, sys.stdin.readline().rstrip().split()))
     small = arr[0:4]
     large = arr[4:]
+    rect = []
+    rect.append(small)
+    rect.append(large)
     max_length = max(arr)
     paper = [[0 for _ in range(max_length + 1)] for _ in range(max_length + 1) ]
-    # print(large, small)
+    cnt1 = 0
+    cnt2 = 0
+    print(large, small)
     for i in range(small[0], small[2] + 1):
         for j in range(small[1], small[3] + 1):
             if paper[i][j] == 0:
@@ -23,20 +28,8 @@ for _ in range(4):
                 paper[i][j] = 2
     cnt = 0
     check = 0
-    cnt2 = 0
+    print(cnt1, cnt2)
     for i in range(max_length):
         if 2 in paper[i]:
             cnt += 1
-            for j in range(len(paper[i])):
-                if paper[i][j] == 2:
-                    cnt2 += 1
-                
-    if cnt == 0:
-        print("d")
-    elif cnt == 1:
-        if cnt2 > 1:
-            print("b")
-        else:
-            print("c")
-    else:
-        print("a")
+    print(cnt)
