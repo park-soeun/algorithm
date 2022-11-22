@@ -11,13 +11,17 @@ for i in range(len(road)):
         print(time)
     else:
         tmp = time
+        print(f'time은 {time}, i는 {i}')
         while tmp > road[i][2]:
             tmp = tmp - road[i][2]
             
-        if tmp >= road[i][0]:
+        if tmp > road[i][0]:
+            print(f'if : tmp = {tmp} road[i] = {road[i]}')
             time += 1
             print(time)
         else:
-            time += (road[i][0] - tmp)
+            print(f'else: tmp = {tmp} road[i] = {road[i]}')
+
+            time += (road[i][0] - tmp + 1)
             print(time)
 print(time)
