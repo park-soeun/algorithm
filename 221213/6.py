@@ -10,8 +10,13 @@ for tc in range(T):
             con.append(1)
         else:
             con.append(0)
+    total = 0
+    for p in range(N):
+        
 
-    
+
+
+
                 
 
             
